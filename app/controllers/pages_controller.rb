@@ -29,6 +29,6 @@ class PagesController < ApplicationController
 
   def list
     @job_id = params[:id].to_i
-    @postulados = Postulation.where(job_id: @job_id)
+    @postulados = Postulation.where(job_id: @job_id, check: true)
   end
 end
