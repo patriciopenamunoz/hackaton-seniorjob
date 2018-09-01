@@ -9,7 +9,10 @@
       <ul class="navbar-nav ml-auto">
         <% if user_signed_in? %>
           <% if empleador? %>
-          <!-- Insertar lo que ve el empleador -->          
+          <!-- Insertar lo que ve el empleador -->
+          <li class="nav-item">
+            <%= link_to 'Ver listado de empleos', jobs_path, class: 'nav-link js-scroll-trigger' %>
+          </li>
           <li class="nav-item">
             <%= link_to 'Crear empleo', new_job_path, class: 'nav-link js-scroll-trigger' %>
           </li>
@@ -25,7 +28,7 @@
           <li class="nav-item">
             <%= link_to 'Cerrar sesión', destroy_user_session_path, method: 'delete', class: 'nav-link js-scroll-trigger' %>
           </li>
-          
+
         <% else %>
           <!-- No lgueado -->
         <li class="nav-item">
