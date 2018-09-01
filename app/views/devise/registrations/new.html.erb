@@ -4,9 +4,27 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :name %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "name" %>
+    <%= f.label :nombre %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "nombre" %>
   </div>
+  <div class="field">
+    <%= f.label :edad%>
+    <%= f.email_field :age, autofocus: true, autocomplete: "edad" %>
+  </div>
+  <div class="field">
+    <%= f.label :rut %>
+    <%= f.email_field :rut, autofocus: true, autocomplete: "rut" %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono %>
+    <%= f.email_field :cellphone, autofocus: true, autocomplete: "Telefono" %>
+  </div>
+
+
+  <form action="">
+  <input type="radio" name="rol" value="trabajador"> Trabajador<br>
+  <input type="radio" name="rol" value="empleador"> Empleador<br>
+</form>
 
   <div class="field">
     <%= f.label :email %><br />
