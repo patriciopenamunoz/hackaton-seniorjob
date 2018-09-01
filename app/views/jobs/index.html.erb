@@ -23,6 +23,7 @@
         <td><%= job.schedule %></td>
         <td><%= job.tag %></td>
         <td><%= job.rent %></td>
+
         <% if user_signed_in? %>
       <td>  <% if Postulation.find_by(user_id: current_user.id , job_id: job.id, check: true) != nil %>
        <%= link_to "Desmarcar", job , class: 'btn btn-danger' %>
@@ -30,6 +31,7 @@
         <%= link_to "Marcar", job , class: 'btn btn-primary' %>
          <% end %></td>
          <% end %>
+
         <td><button type="button" class="btn btn-primary"><%= link_to 'Edit', edit_job_path(job) %></button></td>
         <td><button type="button" class="btn btn-primary"><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
       </tr>

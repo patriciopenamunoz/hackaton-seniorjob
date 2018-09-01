@@ -1,0 +1,12 @@
+
+<% @postulation.each do |k| %>
+  <div class="row">
+
+  <div class="col">  <%= k.job.title %>  </div>
+  <div class="col">  <%= k.user.name %>  </div>
+    <div class="col">  <%= k.user.rut %>  </div>
+    <div class="col">  <%= k.user.email %>  </div>
+
+    </div>
+
+<% end %>

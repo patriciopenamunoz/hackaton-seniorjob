@@ -20,4 +20,10 @@ class PostulationController < ApplicationController
     @postulation = current_user.postulations.where(check: true)
   end
 
+  def show
+    @postulation = current_user.postulations.where(check: true)
+  end
+
+  
+
   end
