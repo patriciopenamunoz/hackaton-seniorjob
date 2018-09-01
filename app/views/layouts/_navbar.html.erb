@@ -9,7 +9,10 @@
       <ul class="navbar-nav ml-auto">
         <% if user_signed_in? %>
           <% if empleador? %>
-          <!-- Insertar lo que ve el empleador -->
+          <!-- Insertar lo que ve el empleador -->          
+          <li class="nav-item">
+            <%= link_to 'Crear empleo', new_job_path, class: 'nav-link js-scroll-trigger' %>
+          </li>
           <%else%>
 
           <!-- Insertar lo que ve el abuelo -->
