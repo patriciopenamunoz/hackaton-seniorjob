@@ -26,4 +26,9 @@ class PagesController < ApplicationController
     end
     @job = Job.find(params[:id].to_i)
   end
+
+  def list
+    @job_id = params[:id].to_i
+    @postulados = Postulation.where(job_id: @job_id)
+  end
 end

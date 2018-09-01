@@ -1,0 +1,16 @@
+<div id="list" class="container">
+  <h1>Listado de postulantes</h1>
+  <h2><%= Job.find(@job_id).title %></h2>
+  <% @postulados.each do |postulation| %>
+  <% user = User.find(postulation.user_id) %>
+  <div class="card">
+    <div class="card-body">
+      <h1><%= user.name %></h1>
+      <h3>RUT: <%= user.rut %></h3>
+      <h3>Email: <%= user.email %></h3>
+      <h3>Número de teléfono: <%= user.cellphone %></h3>
+    </div>
+  </div>
+  <% end %>
+  <%= link_to 'Volver', jobs_path %>
+</div>

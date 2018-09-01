@@ -15,7 +15,6 @@ class PostulationController < ApplicationController
       end
     end
 
-
   def index
     @postulation = current_user.postulations.where(check: true)
     redirect_to pages_empleos_path
@@ -25,6 +24,4 @@ class PostulationController < ApplicationController
     @postulation = current_user.postulations.where(check: true)
   end
 
-  
-
-  end
+end
