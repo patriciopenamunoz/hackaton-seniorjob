@@ -4,6 +4,10 @@
   <h3>Sueldo: $<%= number_with_delimiter @job.rent %></h3>
   <p><%= @job.description %></p>
   <form class="" action="index.html" method="post">
-    <input type="submit" class="btn btn-primary" value="Postular">
+    <% if Postulation.find_by(user_id: current_user.id , job_id: @job.id, check: true) != nil %>
+    <%= link_to "Dejar postulación", @job , class: 'btn btn-danger' %>
+    <% else %>
+    <%= link_to "Postular", @job , class: 'btn btn-primary' %>
+    <% end %>
   </form>
 </div>

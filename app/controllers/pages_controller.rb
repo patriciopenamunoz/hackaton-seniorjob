@@ -4,10 +4,12 @@ class PagesController < ApplicationController
   end
 
   def empleos
+    redirect_to root_path if user_signed_in? == false
     @jobs = Job.all
   end
 
   def vista_empleos
+    redirect_to root_path if user_signed_in? == false
     @job = Job.find(params[:id].to_i)
   end
 end
