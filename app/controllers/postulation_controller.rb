@@ -21,4 +21,10 @@ class PostulationController < ApplicationController
     redirect_to pages_empleos_path
   end
 
+  def show
+    @postulation = current_user.postulations.where(check: true)
+  end
+
+  
+
   end
