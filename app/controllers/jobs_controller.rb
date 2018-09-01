@@ -10,7 +10,20 @@ class JobsController < ApplicationController
   # GET /jobs/1
   # GET /jobs/1.json
   def show
+    @job = Job.find(params[:id])
+    @postulation = Postulation.find_or_create_by(job: @job, user: current_user )
+    if @postulation.check == true
+    @postulation.update(job: @job, user: current_user, check: false )
+    else
+    @postulation.update(job: @job, user: current_user, check: true )
+    end
+    if @job.save
+      redirect_to postulation_index_path, notice: 'Tarea ingresada'
+    else
+      redirect_to jobs_path, alert: 'Tarea no ingresada'
+    end
   end
+
 
   # GET /jobs/new
   def new

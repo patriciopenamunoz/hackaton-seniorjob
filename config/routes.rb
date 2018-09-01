@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :jobs
+  resources :postulation
   devise_for :users
 
   root 'pages#index'
