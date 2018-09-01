@@ -8,7 +8,7 @@
 
       <div class="field form-group">
         <%= f.label :nombre %>
-        <%= f.text_field :email, autofocus: true, autocomplete: "nombre", class: "form-control" %>
+        <%= f.text_field :name, autofocus: true, autocomplete: "nombre", class: "form-control" %>
       </div>
       <div class="field form-group">
         <%= f.label :edad%>
@@ -23,8 +23,8 @@
         <%= f.telephone_field :cellphone, autofocus: true, autocomplete: "Telefono", class: "form-control" %>
       </div>
 
-      <input type="radio" name="user[rol]" value="0"> Trabajador<br>
-      <input type="radio" name="user[rol]" value="1"> Empleador<br>
+      <input type="radio" name="user[role]" value="empleado"> Trabajador<br>
+      <input type="radio" name="user[role]" value="empleador"> Empleador<br>
 
 
       <div class="field form-group">
