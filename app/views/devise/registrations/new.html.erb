@@ -5,7 +5,8 @@
       <%= devise_error_messages! %>
 
       <div class="field form-group">
-        <%= f.label 'Nombre' %>
+        <%= f.label :nombre %>
+
         <%= f.text_field :name, autofocus: true, autocomplete: "nombre", class: "form-control" %>
       </div>
       <div class="field form-group">
@@ -21,8 +22,8 @@
         <%= f.telephone_field :cellphone, autofocus: true, autocomplete: "Telefono", class: "form-control" %>
       </div>
 
-      <input type="radio" name="user[role]" value="0"> Trabajador<br>
-      <input type="radio" name="user[role]" value="1"> Empleador<br>
+      <input type="radio" name="user[role]" value="empleado"> Trabajador<br>
+      <input type="radio" name="user[role]" value="empleador"> Empleador<br>
 
 
       <div class="field form-group">
