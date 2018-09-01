@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-
-  #sessions: 'users/sessions'
+  resources :jobs
   devise_for :users
+
   root 'pages#index'
   get 'pages/index'
   get 'pages/empleos'
