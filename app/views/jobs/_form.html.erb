@@ -1,47 +1,37 @@
-<%= form_with(model: job, local: true) do |form| %>
+  <%= form_with(model: job, local: true) do |form| %>
   <% if job.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(job.errors.count, "error") %> prohibited this job from being saved:</h2>
+  <div id="error_explanation">
+    <h2><%= pluralize(job.errors.count, "error") %> prohibited this job from being saved:</h2>
 
-      <ul>
+    <ul>
       <% job.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <li><%= message %></li>
       <% end %>
-      </ul>
-    </div>
+    </ul>
+  </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="field form-group">
+    <%= form.label 'Título' %>
+    <%= form.text_field :title, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
+  <div class="field form-group">
+    <%= form.label 'Descripción' %>
+    <%= form.text_field :description, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :schedule %>
-    <%= form.text_field :schedule %>
+  <div class="field form-group">
+    <%= form.label 'Horario (inicio y termino)' %>
+    <%= form.text_field :schedule, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :tag %>
-    <%= form.text_field :tag %>
-  </div>
-
-  <div class="field">
-    <%= form.label :rent %>
-    <%= form.number_field :rent %>
-  </div>
-
-  <div class="field">
-    <%= form.label :postulacion_id %>
-    <%= form.text_field :postulacion_id %>
+  <div class="field form-group">
+    <%= form.label 'Sueldo' %>
+    <%= form.number_field :rent, class: 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: 'btn btn-primary' %>
   </div>
-<% end %>
+  <% end %>
