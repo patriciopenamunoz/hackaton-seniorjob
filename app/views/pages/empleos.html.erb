@@ -1,11 +1,17 @@
 <div id="empleos" class="container">
-      <% @jobs.each do |e| %>
-      <div class="card"
-      onclick="window.location.replace('<%= pages_vista_empleos_path+'?id='+e.id.to_s %>')">
+      <% @jobs.each do |job| %>
+      <div class="card">
         <div class="card-body">
-          <h1><%= e.title %></h1>
-          <h3><%= e.schedule %></h3>
-          <p><%= e.description %></p>
+          <h1><%= job.title %></h1>
+          <% if Postulation.find_by(user_id: current_user.id , job_id: job.id, check: true) != nil %>
+          <div class="proc">EN PROCESO DE POSTULACIÓN</div>
+          <% end %>
+          <h3><%= job.schedule %></h3>
+          <p><%= job.description %></p>
+          <a class="btn btn-primary"
+          href="<%= pages_vista_empleos_path+'?id='+job.id.to_s %>">
+          Revisar empleo
+        </a>
         </div>
       </div>
       <% end %>
