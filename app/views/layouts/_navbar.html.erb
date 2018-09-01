@@ -8,13 +8,10 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          <%= link_to 'Iniciar sesión', new_user_session_path, class: 'nav-link js-scroll-trigger' %>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
+          <%= link_to 'Registrarse', new_user_registration_path, class: 'nav-link js-scroll-trigger' %>
         </li>
       </ul>
     </div>
