@@ -1,0 +1,12 @@
+<div id="empleos" class="container">
+      <% @jobs.each do |e| %>
+      <div class="card"
+      onclick="window.location.replace('<%= pages_vista_empleos_path+'?id='+e.id.to_s %>')">
+        <div class="card-body">
+          <h1><%= e.title %></h1>
+          <h3><%= e.schedule %></h3>
+          <p><%= e.description %></p>
+        </div>
+      </div>
+      <% end %>
+</div>
