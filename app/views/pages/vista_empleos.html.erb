@@ -1,7 +1,9 @@
 <div id="vista_empleos" class="container">
   <h1><%= @job.title %></h1>
   <h3>Horario: <%= @job.schedule %></h3>
-  <h3>Sueldo: <%= @job.rent %></h3>
+  <h3>Sueldo: $<%= number_with_delimiter @job.rent %></h3>
   <p><%= @job.description %></p>
-
+  <form class="" action="index.html" method="post">
+    <input type="submit" class="btn btn-primary" value="Postular">
+  </form>
 </div>
