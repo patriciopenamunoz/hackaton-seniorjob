@@ -4,5 +4,10 @@ class PagesController < ApplicationController
   end
 
   def empleos
+    @jobs = Job.all
+  end
+
+  def vista_empleos
+    @job = Job.find(params[:id].to_i)
   end
 end
