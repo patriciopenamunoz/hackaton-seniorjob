@@ -29,12 +29,12 @@ ActiveRecord::Schema.define(version: 2018_09_01_042253) do
 
   create_table "postulations", force: :cascade do |t|
     t.bigint "job_id"
-    t.bigint "users_id"
+    t.bigint "user_id"
     t.boolean "check", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["job_id"], name: "index_postulations_on_job_id"
-    t.index ["users_id"], name: "index_postulations_on_users_id"
+    t.index ["user_id"], name: "index_postulations_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
