@@ -15,15 +15,15 @@
       </div>
       <div class="field form-group">
         <%= f.label 'Rut' %>
-        <%= f.text_field :rut, autofocus: true, autocomplete: "rut", class: "form-control" %>
+        <%= f.text_field :rut, autofocus: true, autocomplete: "rut", maxlength: "9", class: "form-control" %>
       </div>
       <div class="field form-group">
         <%= f.label 'Teléfono' %>
-        <%= f.telephone_field :cellphone, autofocus: true, autocomplete: "Telefono", class: "form-control" %>
+        <%= f.telephone_field :cellphone, autofocus: true, autocomplete: "Telefono", maxlength: "9",  class: "form-control" %>
       </div>
 
-      <input type="radio" name="user[role]" value="0"> Trabajador<br>
-      <input type="radio" name="user[role]" value="1"> Empleador<br>
+      <input type="radio" name="user[role]" value="empleado" checked="true"> Trabajador<br>
+      <input type="radio" name="user[role]" value="empleador"> Empleador<br>
 
 
       <div class="field form-group">
